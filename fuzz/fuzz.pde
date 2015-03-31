@@ -1,18 +1,27 @@
+//it's dank
+int x = 0;
+int [] y = {50,150,250,350,450, 550, 650, 750, 850};
+
+
 void setup(){
   size(1280, 800);
-  background(255, 255, 0);
-  frameRate(4000);
+ 
+  frameRate(4000000);
 }
 
-
-
 void draw(){
-  float xr = random(0, 1280);
-  float yr = random(0, 800);
-  float statcol = random(0, 255);
-  noStroke();
-  fill(statcol);
-  ellipse(xr, yr, 2, 2);
+  background(#F5E400);
+  x=x+10;
+  //loop and draw all circles
+  int pomme = 0;
+  while (pomme < y.length) {
+    ellipse(x,y[pomme], 5, 5);
+    pomme = pomme + 1;
+  }
+
+ if(x>=width){
+    x=0;
+  }
 }  
 
 
