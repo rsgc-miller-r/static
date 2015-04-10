@@ -1,7 +1,7 @@
 //Prog's dank as swain's raven
 float ex = 0;
 float why = 500;
-float noiseScale=0.02;
+float noiseScale=8;
 void setup(){
   size(1280, 800);
 }
