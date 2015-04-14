@@ -31,7 +31,7 @@ void draw() {
     float valNoise = noise((500+x)*scaleNoise, why*scaleNoise);
     stroke(valNoise*random(255), random(0), random(255));
      translate(width/2, height/2);
-    rotate(random(360));
+    rotate(rot);
    line(valNoise*80 + width, x, 0, x);
   }
   //up/down, cyan
@@ -40,7 +40,7 @@ void draw() {
     float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
     stroke(noiseVal*0, 255, 255);
     translate(width/2, height/2);
-    rotate(random(360));
+    rotate(rot);
    line(x, 500+noiseVal*80, x, height);
   }
    
