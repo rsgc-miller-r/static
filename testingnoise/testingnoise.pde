@@ -1,14 +1,15 @@
 //By Rob 'Gorrilla Ribs' Miller
 //Prog's dank as swain's raven
 //almust dank as shrek's dank kush, but cant be cuz shrek's dank kush
+
 float ex = 0;
 float why = 0;
-float noiseScale=0.9;
+float noiseScale=0.01;
 float scaleNoise=0.01;
 
 void setup(){
   frameRate(4000);
-  size(1280, 800);
+  size(1000, 1000);
 }
 
 void draw() {
@@ -29,11 +30,19 @@ void draw() {
     line(valNoise*80 + width, x, 0, x);
   }
   //up/down, cyan
-  //ex = ex + 5;
-  //for (int x=0; x < width; x++) {
-    //float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
-    //stroke(noiseVal*0, 255, 255);
-    //line(x, 500+noiseVal*80, x, height);
-  //}
+  if (keyPressed) {
+    if (key == 'q' || key == 'Q')
+    noiseScale = noiseScale - 0.001;
+  }
+  if (keyPressed) {
+    if (key == 'e' || key == 'E')
+    noiseScale = noiseScale + 0.001;
+  }
+  ex = ex + 5;
+  for (int x=0; x < width; x++) {
+    float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
+    stroke(noiseVal*0, 255, 255);
+    line(x, 500+noiseVal*80, x, height);
+  }
    
 }
