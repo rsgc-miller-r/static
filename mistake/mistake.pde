@@ -3,7 +3,7 @@
 //almust dank as shrek's dank kush, but cant be cuz shrek's dank kush
 float ex = 0;
 float why = 0;
-float noiseScale=0.04;
+float noiseScale=0.01;
 float scaleNoise=0.01;
 int rot = 0;
 
@@ -25,15 +25,15 @@ void draw() {
    //line(x, -500+valNoise*80, x, height);
  //}
   //sideways?
-  ex = ex +5;
-  why = why + 5;
-   for (int x=0; x < height; x++) {
-    float valNoise = noise((500+x)*scaleNoise, why*scaleNoise);
-    stroke(valNoise*random(255), random(0), random(255));
-    translate(width/1.25, height/1.25);
-    rotate(90);
-   line(valNoise*80 + width, x, 0, x);
-  }
+ // ex = ex +5;
+  //why = why + 5;
+   //for (int x=0; x < height; x++) {
+    //float valNoise = noise((500+x)*scaleNoise, why*scaleNoise);
+    //stroke(valNoise*random(255), random(0), random(255));
+    //translate(width/1.25, height/1.25);
+    //rotate(90);
+   //line(valNoise*80 + width, x, 0, x);
+  //}
   //up/down, cyan
  ex = ex + 5;
   for (int x=0; x < width; x++) {

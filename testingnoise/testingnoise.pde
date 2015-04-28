@@ -8,7 +8,7 @@ float noiseScale=0.01;
 float scaleNoise=0.01;
 
 void setup(){
-  frameRate(4000);
+ 
   size(1000, 1000);
 }
 
@@ -29,20 +29,19 @@ void draw() {
     stroke(valNoise*random(255), random(0), random(255));
     line(valNoise*80 + width, x, 0, x);
   }
+  //int[] intensity = new int[1];
   //up/down, cyan
-  if (keyPressed) {
-    if (key == 'q' || key == 'Q')
-    noiseScale = noiseScale - 0.001;
-  }
-  if (keyPressed) {
-    if (key == 'e' || key == 'E')
-    noiseScale = noiseScale + 0.001;
-  }
+  //if (mouseX ) {
+    //noiseScale = noiseScale + 0.01;
+  //}
+
   ex = ex + 5;
   for (int x=0; x < width; x++) {
     float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
-    stroke(noiseVal*0, 255, 255);
+    stroke(noiseVal*255, 255, 255);
     line(x, 500+noiseVal*80, x, height);
   }
-   
+     if(mousePressed) {
+  println(atan2(mouseX, mouseY));
+}
 }
