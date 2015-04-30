@@ -7,7 +7,7 @@ float why = 0;
 
 void setup(){
  //make canvas
-  size(1000, 1000);
+  size(1000, 667);
 }
 
 void draw() {
@@ -27,9 +27,14 @@ void draw() {
     //creating random #s based on perlin interval
     float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
     //colour of the noise up to the line
-    stroke(noiseVal*random(255), random(0), random(255));
+    stroke(noiseVal*random(0), random(255), random(0));
     //the line the noise visualizes at
-    line(x, 500+noiseVal*80, x, height);
+    line(x, -500+noiseVal*80, x, height);
   }
+   //load image of shrek
+  PImage img;
+  img = loadImage("Shrek.jpg");
+  image(img, 0, 0);
+  tint(255, tan*100);
   
 }
