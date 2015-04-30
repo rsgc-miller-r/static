@@ -39,8 +39,7 @@ void draw() {
   for (int x=0; x < width; x++) {
     float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
     stroke(noiseVal*0, 255, 255);
-    translate(width/2.35, height/2.35);
-    rotate(90);
+    rotate(atan2(mouseX/2, mouseY/2));
    line(x, 500+noiseVal*80, x, height);
   }
    
