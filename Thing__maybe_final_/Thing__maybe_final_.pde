@@ -6,6 +6,7 @@ import processing.sound.*;
 //x any y variables
 float ex = 0;
 float why = 0;
+//timer variable for swamp.mp3
 int timer = 0;
 SoundFile swamp;
 
@@ -28,7 +29,8 @@ void draw() {
   //'scales' the noise by changing the perlin interval
   float noiseScale=tan/10;
   background(255);
-  //show the tangent at a given position if mouse is pressed
+  //show the tangent from the centre at a given 
+  //position if mouse is pressed
   if (mousePressed) {
     println(tan);
   }
@@ -62,7 +64,7 @@ void draw() {
     println("TOO DANK");
     println("TIMER: " + timer);
     textSize(85);
-    text("TOO DANK", width/2, height/2);
+    text("SW 2015", width/2, height/2);
     fill(232, 14, 228);
   } else {
     //swamp.stop();

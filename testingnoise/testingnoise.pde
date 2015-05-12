@@ -33,7 +33,7 @@ void draw() {
   //up/down, cyan
   //if (mouseX ) {
     //noiseScale = noiseScale + 0.01;
-  //}
+  //}  //Flying Penisis
 
   ex = ex + 5;
   for (int x=0; x < width; x++) {

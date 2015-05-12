@@ -35,12 +35,16 @@ void draw() {
    //line(valNoise*80 + width, x, 0, x);
   //}
   //up/down, cyan
+  pushMatrix();
+  translate(637, 226);
  ex = ex + 5;
   for (int x=0; x < width; x++) {
     float noiseVal = noise((500+x)*noiseScale, ex*noiseScale);
     stroke(noiseVal*0, 255, 255);
     rotate(atan2(mouseX/2, mouseY/2));
-   line(x, 500+noiseVal*80, x, height);
+   line(x, 168+noiseVal*-37, x, height);
   }
+  
+  popMatrix();
    
 }
